@@ -1,1 +1,42 @@
+:root {
+  --background-color: rgba(31, 43, 42, 0.99);
+  --default-color: rgba(4, 176, 30, 0.99);
+}
+
+body {
+  background: rgba(31, 43, 42, 0.99);
+  background: var(--background-color);
+  font-family: "Courier New", serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(4, 176, 30, 0.99);
+  color: var(--default-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+[aria-hidden="false"] {
+  visibility: hidden
+}
+
+@keyframes blink_character {
+  to {
+    visibility: hidden
+  }
+}
+
+div.typed-text {
+
+  > span:last-of-type[aria-hidden="true"] {
+    animation: blink_character 1s steps(5, start) infinite;
+  }
+
+  > span[data-value=" "] {
+    padding-left: 1em;
+  }
+}
+
+div.main-header {
+  line-height: 15vh;
+}
 
