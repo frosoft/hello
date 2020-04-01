@@ -1,15 +1,17 @@
 :root {
-  --background-color: rgba(31, 43, 42, 0.99);
-  --default-color: rgba(4, 176, 30, 0.99);
+  --background-color: #343434;
+  --default-color: #b9d2d2;
+  --alt-color: #62a388;
+  --spot-color: #055e68;
 }
 
 body {
-  background: rgba(31, 43, 42, 0.99);
+  background: #343434;
   background: var(--background-color);
   font-family: "Courier New", serif;
   font-size: 18px;
   font-weight: 600;
-  color: rgba(4, 176, 30, 0.99);
+  color: #b9d2d2;
   color: var(--default-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
@@ -38,5 +40,38 @@ div.typed-text {
 
 div.main-header {
   line-height: 15vh;
+}
+
+@keyframes move {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+$spot-size: 20vmin;
+$max-spots: 8;
+$spot-speed: 7s;
+.background-spots span {
+  height: $spot-size;
+  width: $spot-size;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  position: fixed;
+  overflow: hidden;
+  opacity: 0.6;
+  animation-name: move;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  @for $i from 1 through $max-spots {
+    &:nth-child(#{$i}) {
+      color: #055e68;
+      color: var(--spot-color);
+      top: random(100) * 1%;
+      left: random(100) * 1%;
+      animation-duration: random($spot-speed) * 1s + $spot-speed;
+      transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
+      box-shadow: $spot-size * 2 0 $spot-size * 0.7 currentColor;
+    }
+  }
 }
 
