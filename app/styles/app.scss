@@ -75,3 +75,51 @@ $spot-speed: 7s;
   }
 }
 
+.service-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-template-rows: max-content;
+  grid-column-gap: 50px;
+  max-width: (3 * 350px) + (2 * 50px);
+  margin: auto;
+}
+
+.service-card {
+  position: relative;
+  width: 350px;
+  height: 100%;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+
+  &:after,
+  &:before {
+    content: '';
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    filter: blur(5px);
+  }
+
+  &:after {
+    box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
+
+  &:before {
+    box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.05);
+  }
+
+  h2, p {
+    text-align: center;
+  }
+}

@@ -12,5 +12,6 @@ module('Acceptance | index', function (hooks) {
 
     assert.dom('.background-spots').exists();
     assert.dom('.main-header').exists();
+    assert.dom('.service-card').exists({count: 2});
   });
 });

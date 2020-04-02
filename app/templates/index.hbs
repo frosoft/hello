@@ -1,0 +1,11 @@
+<div class="service-card-grid">
+  <ServiceCard
+          @heading={{this.serviceBespokeHeading}}
+          @content={{this.serviceBespokeContent}}
+          @onClick={{fn this.transitionTo "index"}}
+  />
+  <ServiceCard
+          @heading={{this.serviceLegacyHeading}}
+          @content={{this.serviceLegacyContent}}
+  />
+</div>
