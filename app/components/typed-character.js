@@ -1,6 +1,7 @@
 import Component from '@glimmer/component';
 import {tracked} from '@glimmer/tracking';
 import {later} from '@ember/runloop';
+import {getOwner} from '@ember/application';
 
 export default class TypedCharacter extends Component {
 
@@ -8,6 +9,14 @@ export default class TypedCharacter extends Component {
 
   get isNewLine() {
     return this.args.character === '\n';
+  }
+
+  get testTolerantDelay() {
+    const config = getOwner(this).resolveRegistration('config:environment');
+    if (config.environment === 'test') {
+      return 10;
+    }
+    return this.args.delay;
   }
 
   constructor() {
@@ -20,7 +29,7 @@ export default class TypedCharacter extends Component {
       this.ariaHidden = 'false';
       later(this, () => {
         this.ariaHidden = 'true';
-      }, delay);
+      }, this.testTolerantDelay);
     }
   }
 }

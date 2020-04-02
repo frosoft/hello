@@ -26,11 +26,11 @@ module('Integration | Component | typed-text', function (hooks) {
 
     assert.dom('.typed-text span[aria-hidden="true"]').doesNotExist();
 
-    await waitFor('.typed-text span[aria-hidden="true"]', {timeout: 101});
+    await waitFor('.typed-text span[aria-hidden="true"]', {timeout: 10});
 
     assert.dom('.typed-text span[aria-hidden="true"]').exists({count: 1});
 
-    await waitFor('.typed-text span:nth-of-type(2)[aria-hidden="true"]', {timeout: 101});
+    await waitFor('.typed-text span:nth-of-type(2)[aria-hidden="true"]', {timeout: 10});
 
     assert.dom('.typed-text span[aria-hidden="true"]').exists({count: 2});
   });

@@ -26,11 +26,11 @@ module('Integration | Component | typed-character', function (hooks) {
 
     render(hbs`<TypedCharacter @character="a" @delay="100"/>`);
 
-    await waitFor('span[aria-hidden="false"]', {timeout: 50});
+    await waitFor('span[aria-hidden="false"]');
 
     assert.dom('span').hasAttribute('aria-hidden', 'false');
 
-    await waitFor('span[aria-hidden="true"]', {timeout: 101});
+    await waitFor('span[aria-hidden="true"]', {timeout: 10});
 
     assert.dom('span').hasAttribute('aria-hidden', 'true');
   });
