@@ -1,6 +1,5 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
 
-export default Component.extend({
-  classNames: ['background-spots'],
-  spots: Object.freeze(new Array(8))
-});
+export default class BackgroundSpots extends Component {
+  spots = new Array(8);
+}

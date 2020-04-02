@@ -1,27 +1,26 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
+import {tracked} from '@glimmer/tracking';
 import {later} from '@ember/runloop';
-import {equal} from '@ember/object/computed';
 
-export default Component.extend({
-  tagName: 'span',
-  attributeBindings: ['ariaHidden:aria-hidden', 'dataValue:data-value'],
+export default class TypedCharacter extends Component {
 
-  isNewLine: equal('character', '\n'),
-  get dataValue() {
-    return this.character;
-  },
+  @tracked ariaHidden;
 
-  init() {
-    this._super(...arguments);
+  get isNewLine() {
+    return this.args.character === '\n';
+  }
 
-    const delay = this.delay;
+  constructor() {
+    super(...arguments);
+
+    const delay = this.args.delay;
     if (`${delay}` === '0') {
-      this.set('ariaHidden', 'true');
+      this.ariaHidden = 'true';
     } else {
-      this.set('ariaHidden', 'false');
-      later(this, function () {
-        this.set('ariaHidden', 'true')
+      this.ariaHidden = 'false';
+      later(this, () => {
+        this.ariaHidden = 'true';
       }, delay);
     }
   }
-});
+}

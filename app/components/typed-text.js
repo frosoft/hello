@@ -1,14 +1,13 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
 import {A} from '@ember/array';
 
-export default Component.extend({
-  classNames: ['typed-text'],
+export default class TypedText extends Component {
 
-  speed: 50,
+  speed = 50;
 
   get characters() {
-    return A(this.content.split(''));
-  },
+    return A(this.args.content.split(''));
+  }
 
   get characterDelays() {
     return this.characters
@@ -20,5 +19,5 @@ export default Component.extend({
         }
         return acc;
       }, {});
-  },
-});
+  }
+}

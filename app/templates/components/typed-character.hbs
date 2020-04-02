@@ -1,4 +1,6 @@
-{{@character}}
-{{#if isNewLine}}
+<span aria-hidden={{this.ariaHidden}} data-value={{@character}}>
+  {{@character}}
+</span>
+{{#if this.isNewLine}}
   <br>
 {{/if}}

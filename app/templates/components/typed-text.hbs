@@ -1,3 +1,5 @@
-{{#each characters as |char index|}}
-  <TypedCharacter @character={{char}} @delay={{get characterDelays index}}/>
-{{/each}}
+<div class="typed-text" ...attributes>
+  {{#each characters as |char index|}}
+    <TypedCharacter @character={{char}} @delay={{get characterDelays index}}/>
+  {{/each}}
+</div>
