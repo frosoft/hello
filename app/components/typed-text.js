@@ -14,7 +14,7 @@ export default class TypedText extends Component {
 
     const config = getOwner(this).resolveRegistration('config:environment');
     if (config.environment === 'test') {
-      this.speed = 10;
+      this.speed = 0;
     }
 
     this.characterDelays = A(this.characters.map(() => 'false'));
