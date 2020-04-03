@@ -1,43 +1,27 @@
 import {module, test} from 'qunit';
 import {setupRenderingTest} from 'ember-qunit';
-import {render, waitFor} from '@ember/test-helpers';
+import {render} from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | typed-character', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders without delay', async function (assert) {
-
-    await render(hbs`<TypedCharacter @character="a" @delay="0"/>`);
+  test('it renders', async function (assert) {
+    this.set('ariaHidden', 'true');
+    await render(hbs`<TypedCharacter @character="a" aria-hidden={{this.ariaHidden}}/>`);
 
     assert.dom('span').hasText('a');
     assert.dom('span').hasAttribute('data-value', 'a');
     assert.dom('span').hasAttribute('aria-hidden', 'true');
-  });
 
-  test('it renders without supplying delay', async function (assert) {
-
-    await render(hbs`<TypedCharacter @character="a"/>`);
-
-    assert.dom('span').hasAttribute('aria-hidden', 'true');
-  });
-
-  test('it renders with delay', async function (assert) {
-
-    render(hbs`<TypedCharacter @character="a" @delay="100"/>`);
-
-    await waitFor('span[aria-hidden="false"]');
+    this.set('ariaHidden', 'false');
 
     assert.dom('span').hasAttribute('aria-hidden', 'false');
-
-    await waitFor('span[aria-hidden="true"]', {timeout: 10});
-
-    assert.dom('span').hasAttribute('aria-hidden', 'true');
   });
 
   test('it renders new lines', async function (assert) {
     this.set('character', '\n');
-    await render(hbs`<TypedCharacter @character={{this.character}} @delay="0"/>`);
+    await render(hbs`<TypedCharacter @character={{this.character}}/>`);
 
     assert.dom('br').exists();
 
