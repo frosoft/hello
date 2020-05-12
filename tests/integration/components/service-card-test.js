@@ -10,7 +10,7 @@ module('Integration | Component | service-card', function (hooks) {
 
     await render(hbs`<ServiceCard @heading="Plumbing" @content="I do some pipe work"/>`);
 
-    assert.dom('a.service-card > section > h2').hasText('Plumbing');
-    assert.dom('a.service-card > section > p').hasText('I do some pipe work');
+    assert.dom('.service-card > div.content > h2').hasText('Plumbing');
+    assert.dom('.service-card > div.content > p').hasText('I do some pipe work');
   });
 });

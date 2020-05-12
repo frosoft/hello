@@ -1,11 +1,26 @@
-<div class="service-card-grid">
+<section id="about-me">
+  <h2>
+    Hello!
+    <br>
+    I'm Richard Frosztega
+  </h2>
+  <p>
+    I'm a Java & Javascript Developer living in Harrogate, Yorkshire.
+    When I'm not enjoying the stunning <a href="https://www.yorkshire.com" target="_blank">Yorkshire countryside</a>
+    or drinking the fabulous <a href="https://www.yorkshiretea.co.uk" target="_blank">tea</a>
+    I enjoy solving software engineering puzzles
+  </p>
+  <p>
+    Scroll down to see some of the things that I can offer you
+  </p>
+</section>
+<section>
   <ServiceCard
           @heading={{this.serviceBespokeHeading}}
           @content={{this.serviceBespokeContent}}
-          @onClick={{fn this.transitionTo "index"}}
   />
   <ServiceCard
           @heading={{this.serviceLegacyHeading}}
           @content={{this.serviceLegacyContent}}
   />
-</div>
+</section>

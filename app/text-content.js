@@ -1,8 +1,10 @@
-const mainHeader = `Welcome to
-  Frosztega Software Engineering|`;
+const mainHeader = `  Welcome to
+      Frosztega
+        Software
+          Engineering|`;
 
-const serviceBespokeHeading = 'Bespoke Software Development';
-const serviceBespokeContent = 'From idea to delivery, working with our customers to ' +
+const serviceBespokeHeading = 'Software From Scratch';
+const serviceBespokeContent = 'Got an idea? Then From idea to delivery, working with our customers to ' +
   'deliver technology solutions to complex business problems';
 
 const serviceLegacyHeading = 'Legacy Software Improvement';
