@@ -13,6 +13,8 @@ module('Acceptance | index', function (hooks) {
     assert.dom('.background-spots').exists();
     assert.dom('.main-header').exists();
     assert.dom('.skills-masonry').exists();
-    assert.dom('.service-card').exists({count: 2});
+    assert.dom('.service-card').exists({count: 3});
+    assert.dom('.service-card[data-aos="zoom-in-right"] + .service-card[data-aos="zoom-in-left"]')
+      .exists('should add scroll efects to service cards from alternate sides');
   });
 });

@@ -27,12 +27,11 @@
 </section>
 
 <section>
-  <ServiceCard
-          @heading={{this.serviceBespokeHeading}}
-          @content={{this.serviceBespokeContent}}
-  />
-  <ServiceCard
-          @heading={{this.serviceLegacyHeading}}
-          @content={{this.serviceLegacyContent}}
-  />
+  {{#each this.model.services as |service index|}}
+    <ServiceCard
+            @heading={{service.heading}}
+            @content={{service.body}}
+            data-aos={{if (even index) "zoom-in-right" "zoom-in-left"}}
+    />
+  {{/each}}
 </section>

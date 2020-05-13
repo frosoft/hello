@@ -45,6 +45,7 @@ div.main-header {
   font-family: "Courier New", serif;
   height: 100vh;
   width: 100%;
+  margin: 0 8px;
   position: fixed;
   top: 0;
   left: 0;
@@ -56,6 +57,8 @@ div.main-header {
 }
 
 div.main-content {
+margin: 0;
+padding: 0;
   margin-top: 100vh;
   width: 100%;
   background-color: #343434;
@@ -125,7 +128,7 @@ $spot-speed: 7s;
 }
 
 .service-card {
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
 
   div.col {
@@ -135,14 +138,16 @@ $spot-speed: 7s;
 
   div.col.space {
     height: 100%;
-    width: 40%;
-    background: var(--background-color);
-  background-color: var(--background-color);
+    width: 30%;
+    background-color: #343434;
+    background-color: var(--background-color);
   }
 
   div.col.content {
-    min-height: 300px;
-    width: 60%;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+    width: 70%;
+    background-color: #055e68;
     background-color: var(--spot-color);
 
     div {
@@ -154,7 +159,8 @@ $spot-speed: 7s;
        height: 100%;
        width: 30%;
        position: absolute;
-       background: var(--background-color);
+       background: #343434;
+       background: var(--spot-color);
        border-radius: 50%;
        top: 0;
        left: -15%;
@@ -166,7 +172,8 @@ $spot-speed: 7s;
        height: 100%;
        width: 30%;
        position: absolute;
-       background: var(--background-color);;
+       background: #343434;
+       background: var(--spot-color);;
        border-radius: 50%;
        top: 0;
        right: -15%;
@@ -183,7 +190,8 @@ $spot-speed: 7s;
       }
 
       h2, p {
-        margin-right: 15%;
+        margin: 1rem 20% 1rem 5%;
+        text-align: right;
       }
     }
   }
@@ -194,18 +202,16 @@ $spot-speed: 7s;
     }
 
       h2, p {
-        margin-left: 15%;
+        margin: 1rem 5% 1rem 20%;
       }
   }
 
   h2 {
-    font-size: 3em;
-    text-align: center;
+    font-size: 2em;
   }
 
   p {
     font-size: 1.5em;
-    text-align: center;
   }
 }
 

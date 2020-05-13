@@ -15,6 +15,7 @@ export default Route.extend({
         {type: "tech", size: "medium", value: "Docker"},
         {type: "tech", size: "medium", value: "Ember"},
         {type: "tech", size: "small", value: "Prometheus"},
+        {type: "area", size: "medium", value: "Full Stack"},
         {type: "tech", size: "small", value: "Spring Security"},
         {type: "tech", size: "small", value: "Node"},
         {type: "tech", size: "large", value: "Javascript"},
@@ -39,6 +40,25 @@ export default Route.extend({
         {type: "skill", size: "medium", value: "CI"},
         {type: "skill", size: "medium", value: "CD"},
         {type: "tech", size: "small", value: "Lucene"}
+        ],
+        services: [
+        {
+          heading: 'Software From Scratch',
+          body: 'Got an idea? Then From idea to delivery, working with you to ' +
+                      'deliver technology solutions to complex business problems'
+        },
+        {
+          heading: 'Legacy Software Improvement',
+          body: 'From small modifications to complete system rewrites, ' +
+                       'working with you to reduce technical debt and increase business value... ' +
+                       'Or just make it work properly!'
+        },
+        {
+          heading: 'Join Your Dev Team',
+          body: 'Joining your team means more than an extra pair of hands. It means having ' +
+                      'someone with lengthy experience who can share knowledge, who can ' +
+                      'aid in architectural discussions and bake a decent sourdough loaf for the team'
+        }
         ]
     });
   }
