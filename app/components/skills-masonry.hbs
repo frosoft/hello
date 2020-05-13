@@ -1,0 +1,5 @@
+<section class="skills-masonry">
+  {{#each @content as |item|}}
+    <div class="{{item.type}} {{item.size}}" data-aos="zoom-in">{{item.value}}</div>
+  {{/each}}
+</section>

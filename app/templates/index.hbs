@@ -1,4 +1,4 @@
-<section id="about-me">
+<section id="about-me" class="full-width-info">
   <h2>
     Hello!
     <br>
@@ -14,6 +14,18 @@
     Scroll down to see some of the things that I can offer you
   </p>
 </section>
+
+<section id="my-skills" class="full-width-info">
+  <h2>
+    I know a lot about the following
+    <br>
+    <span class="tech">Technologies</span>,
+    <span class="skill">Skills</span> &
+    <span class="area">Areas</span>...
+  </h2>
+  <SkillsMasonry @content={{this.model.skills}}/>
+</section>
+
 <section>
   <ServiceCard
           @heading={{this.serviceBespokeHeading}}

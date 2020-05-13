@@ -1,8 +1,10 @@
 :root {
   --background-color: #343434;
+  --alt-background-color: #27323a;
   --default-color: #b9d2d2;
-  --alt-color: #62a388;
+  --secondary-color: #f9d276;
   --spot-color: #055e68;
+  --primary-color: #219897;
 }
 
 body {
@@ -56,13 +58,17 @@ div.main-header {
 div.main-content {
   margin-top: 100vh;
   width: 100%;
+  background-color: #343434;
   background-color: var(--background-color);
   position: relative;
   z-index: 2;
 }
 
 #about-me {
-  min-height: 100vh;
+  background-color: var(--alt-background-color);
+}
+
+.full-width-info {
   padding-top: 10vh;
   padding-bottom: 10vh;
 
@@ -78,8 +84,8 @@ div.main-content {
   }
 
   a {
-    color: #62a388;
-    color: var(--alt-color);
+    color: #f9d276;
+    color: var(--secondary-color);
     text-decoration: none;
   }
 }
@@ -200,5 +206,43 @@ $spot-speed: 7s;
   p {
     font-size: 1.5em;
     text-align: center;
+  }
+}
+
+#my-skills {
+  .small {
+    font-size: 1rem;
+  }
+  .medium {
+    font-size: 2rem;
+  }
+  .large {
+    font-size: 4rem;
+  }
+
+  .tech {
+    color: #219897;
+    color: var(--primary-color);
+  }
+  .skill {
+    color: #b9d2d2;
+    color: var(--default-color);
+  }
+  .area {
+    color: #f9d276;
+    color: var(--secondary-color);
+  }
+}
+
+.skills-masonry {
+  margin: 0 10% 0 30%;
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    margin: 0 0.3rem 0;
+    text-align: center;
+    line-height: 4rem;
+    flex: 1 0 auto;
   }
 }
