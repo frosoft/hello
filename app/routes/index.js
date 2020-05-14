@@ -44,20 +44,20 @@ export default Route.extend({
         services: [
         {
           heading: 'Software From Scratch',
-          body: 'Got an idea? Then From idea to delivery, working with you to ' +
+          body: 'Got an idea? Then From idea to delivery, I can work with you to ' +
                       'deliver technology solutions to complex business problems'
         },
         {
           heading: 'Legacy Software Improvement',
           body: 'From small modifications to complete system rewrites, ' +
-                       'working with you to reduce technical debt and increase business value... ' +
+                       'I can work with you to reduce technical debt and increase business value... ' +
                        'Or just make it work properly!'
         },
         {
           heading: 'Join Your Dev Team',
           body: 'Joining your team means more than an extra pair of hands. It means having ' +
                       'someone with lengthy experience who can share knowledge, who can ' +
-                      'aid in architectural discussions and bake a decent sourdough loaf for the team'
+                      'aid in architectural discussions and bake a decent cake or loaf for the team'
         }
         ]
     });
