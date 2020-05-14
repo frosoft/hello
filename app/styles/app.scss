@@ -77,6 +77,20 @@ h2 {
   font-size: 2em;
 }
 
+h3 {
+  color: #f9d276;
+  color: var(--secondary-color);
+  font-size: 1.6em;
+}
+
+h4 {
+  color: #f9d276;
+  color: var(--secondary-color);
+  font-size: 1.4em;
+  margin: 0;
+  padding: 0;
+}
+
 a {
   color: #219897;
   color: var(--primary-color);
@@ -84,14 +98,14 @@ a {
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .full-width-info {
   padding-top: 10vh;
   padding-bottom: 10vh;
 
-  h2 {
+  h2, h3, h4 {
     padding-left: 20%;
   }
 
@@ -216,6 +230,12 @@ $spot-speed: 7s;
 }
 
 #my-skills {
+
+  h2 {
+    color: #b9d2d2;
+    color: var(--default-color);
+  }
+
   .small {
     font-size: 1rem;
   }
@@ -250,5 +270,14 @@ $spot-speed: 7s;
     text-align: center;
     line-height: 4rem;
     flex: 1 0 auto;
+  }
+}
+
+#contact {
+  background-color: #27323a;
+  background-color: var(--alt-background-color);
+
+  p {
+    margin-top: 0;
   }
 }
