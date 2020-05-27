@@ -61,7 +61,7 @@ div.typed-text {
 }
 
 div.main-header {
-  line-height: 20vh;
+  line-height: 15vh;
   font-family: "Courier New", serif;
   height: 100vh;
   width: calc(100% - 11px);
@@ -71,7 +71,7 @@ div.main-header {
   z-index: 1;
 
   span {
-    font-size: 3.5vw;
+    font-size: min(max(16px, 3.5vw), 50px);
   }
 }
 
