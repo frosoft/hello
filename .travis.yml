@@ -23,3 +23,15 @@ branches:
 
 script:
   - npm test
+  - npm run build -- -prod
+
+# deploy master branch to GitHub pages
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $PAGES_DEPLOY_TOKEN
+  keep-history: true
+  on:
+    branch: master
+  local-dir: dist
+  verbose: true
