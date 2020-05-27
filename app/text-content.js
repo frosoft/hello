@@ -1,4 +1,4 @@
-const mainHeader = `  Welcome to
+const mainHeader = `  Welcome   to
       Frosztega
         Software
           Engineering|`;

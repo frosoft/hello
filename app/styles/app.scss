@@ -7,12 +7,14 @@
   --primary-color: #219897;
 }
 
+$breakpoint-small: 768px;
+
 body {
   background: #343434;
   background: var(--background-color);
   margin: 0;
   font-family: "Verdana", serif;
-  font-size: 18px;
+  font-size: calc(1em + 0.5vw);
   font-weight: 600;
   color: #b9d2d2;
   color: var(--default-color);
@@ -52,7 +54,7 @@ div.main-header {
   z-index: 1;
 
   span {
-    font-size: 2.5em;
+    font-size: 3.5vw;
   }
 }
 
@@ -74,19 +76,19 @@ div.main-content {
 h2 {
   color: #f9d276;
   color: var(--secondary-color);
-  font-size: 2em;
+  font-size: calc(1.5em + 1vw);
 }
 
 h3 {
   color: #f9d276;
   color: var(--secondary-color);
-  font-size: 1.6em;
+  font-size: calc(1.2em + 1vw);
 }
 
 h4 {
   color: #f9d276;
   color: var(--secondary-color);
-  font-size: 1.4em;
+  font-size: calc(1em + 1vw);
   margin: 0;
   padding: 0;
 }
@@ -97,9 +99,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  font-size: 1.2em;
-}
 
 .full-width-info {
   padding-top: 10vh;
@@ -107,11 +106,29 @@ p {
 
   h2, h3, h4 {
     padding-left: 20%;
+    padding-right: 20%;
   }
 
   p {
     padding-left: 20%;
     padding-right: 20%;
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .full-width-info {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+
+    h2, h3, h4 {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+    p {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
   }
 }
 
@@ -166,8 +183,8 @@ $spot-speed: 7s;
   }
 
   div.col.content {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     width: 70%;
     background-color: #055e68;
     background-color: var(--spot-color);
@@ -212,8 +229,14 @@ $spot-speed: 7s;
       }
 
       h2, p {
-        margin: 1rem 20% 1rem 5%;
+        margin: 1em 20% 1em 5%;
         text-align: right;
+      }
+
+      @media (max-width: $breakpoint-small) {
+        h2, p {
+          margin: 1em 15% 1em 5%;
+        }
       }
     }
   }
@@ -223,9 +246,28 @@ $spot-speed: 7s;
       width: 0;
     }
 
+    h2, p {
+      margin: 1em 5% 1em 20%;
+    }
+
+    @media (max-width: $breakpoint-small) {
       h2, p {
-        margin: 1rem 5% 1rem 20%;
+        margin: 1em 5% 1em 15%;
       }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .service-card {
+
+    div.col.space {
+      width: 20%;
+    }
+
+    div.col.content {
+      width: 80%;
+    }
   }
 }
 
@@ -237,13 +279,13 @@ $spot-speed: 7s;
   }
 
   .small {
-    font-size: 1rem;
+    font-size: calc(0.5rem + 0.5vw);
   }
   .medium {
-    font-size: 2rem;
+    font-size: calc(1rem + 1vw);
   }
   .large {
-    font-size: 4rem;
+    font-size: calc(2rem + 2vw);
   }
 
   .tech {
@@ -266,10 +308,16 @@ $spot-speed: 7s;
   flex-wrap: wrap;
 
   div {
-    margin: 0 0.3rem 0;
+    margin: 0 0.3em 0;
     text-align: center;
-    line-height: 4rem;
+    line-height: 3.2rem;
     flex: 1 0 auto;
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  #my-skills .skills-masonry {
+    margin: 0 10% 0 20%;
   }
 }
 
