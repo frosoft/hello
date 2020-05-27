@@ -1,5 +1,5 @@
 <div class="typed-text" ...attributes>
-  {{#each characters as |char index|}}
-    <TypedCharacter @character={{char}} aria-hidden={{get characterDelays index}}/>
+  {{#each this.characters as |char index|}}
+    <TypedCharacter @character={{char}} aria-hidden={{get this.characterDelays index}}/>
   {{/each}}
 </div>
