@@ -1,6 +1,6 @@
 import Application from '@ember/application';
 
-import { initialize } from 'fse-web/initializers/aos';
+import { initialize } from 'frosofteng-hello/initializers/aos';
 import { module, test } from 'qunit';
 import { run } from '@ember/runloop';
 

@@ -1,8 +1,8 @@
 {
-  "name": "fse-web",
+  "name": "frosofteng-hello",
   "version": "0.0.0",
   "private": true,
-  "description": "Small description for fse-web goes here",
+  "description": "small demo website",
   "repository": "",
   "license": "MIT",
   "author": "",

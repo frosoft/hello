@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'fse-web',
+    modulePrefix: 'frosofteng-hello',
     environment,
     rootURL: '/',
     locationType: 'auto',
