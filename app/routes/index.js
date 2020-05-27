@@ -48,7 +48,7 @@ export default Route.extend({
                       'deliver technology solutions to complex business problems'
         },
         {
-          heading: 'Legacy Software Improvement',
+          heading: 'Legacy Software',
           body: 'From small modifications to complete system rewrites, ' +
                        'I can work with you to reduce technical debt and increase business value... ' +
                        'Or just make it work properly!'
@@ -56,7 +56,7 @@ export default Route.extend({
         {
           heading: 'Join Your Dev Team',
           body: 'Joining your team means more than an extra pair of hands. It means having ' +
-                      'someone with lengthy experience who can share knowledge, who can ' +
+                      'someone with lengthy experience who can share knowledge, ' +
                       'aid in architectural discussions and bake a decent cake or loaf for the team'
         }
         ]
