@@ -30,8 +30,9 @@ deploy:
   provider: pages
   skip-cleanup: true
   github-token: $PAGES_DEPLOY_TOKEN
-  keep-history: true
+  keep-history: false
   on:
     branch: master
   local-dir: dist
   verbose: true
+  fqdn: frosoft.co.uk
