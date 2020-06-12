@@ -1,6 +1,6 @@
-# frosofteng.github.io
+# frosoft.github.io
 
-[![Build Status](https://travis-ci.com/frosofteng/frosofteng.github.io.svg?branch=master)](https://travis-ci.com/frosofteng/frosofteng.github.io)
+[![Build Status](https://travis-ci.com/frosoft/frosoft.github.io.svg?branch=master)](https://travis-ci.com/frosoft/frosoft.github.io)
 
 I have written this site with the sole intention of showing off some code and learning some things.
 
