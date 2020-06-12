@@ -17,7 +17,7 @@ module('Acceptance | index', function (hooks) {
     assert.dom('.service-card[data-aos="zoom-in-right"] + .service-card[data-aos="zoom-in-left"]')
       .exists('should add scroll efects to service cards from alternate sides');
     assert.dom('#contact').exists();
-    assert.dom('#contact a').hasAttribute('href', 'mailto:richard.frosztega@gmail.com');
-    assert.dom('#contact a').hasText('richard.frosztega@gmail.com');
+    assert.dom('#contact a').hasAttribute('href', 'mailto:richard@frosoft.co.uk');
+    assert.dom('#contact a').hasText('richard@frosoft.co.uk');
   });
 });
