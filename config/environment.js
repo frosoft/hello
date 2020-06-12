@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'frosofteng-hello',
+    modulePrefix: 'frosoft-hello',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -44,7 +44,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/hello/';
     // here you can enable a production-specific feature
   }
 
