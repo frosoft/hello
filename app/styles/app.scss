@@ -61,25 +61,23 @@ div.typed-text {
 }
 
 div.main-header {
+  padding-top: 15vh;
   line-height: 15vh;
-  font-family: "Courier New", serif;
+  font-family: "Courier", mono;
   height: 100vh;
-  width: calc(100% - 11px);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
 
   span {
-    font-size: min(max(16px, 3.5vw), 50px);
+    font-size: min(max(17px, 3.5vw), 50px);
+    font-weight: 900;
   }
 }
 
 div.main-content {
   margin-top: 100vh;
-  width: 100%;
-  background-color: #343434;
-  background-color: var(--background-color);
   position: relative;
   z-index: 2;
   box-shadow: 0px -2px 11px -2px rgba(34,76,110,1);
@@ -183,6 +181,10 @@ $spot-speed: 7s;
   }
 }
 
+#service-cards {
+  overflow: hidden;
+}
+
 .service-card {
   width: 100%;
   overflow: hidden;
@@ -195,8 +197,6 @@ $spot-speed: 7s;
   div.col.space {
     height: 100%;
     width: 30%;
-    background-color: #343434;
-    background-color: var(--background-color);
   }
 
   div.col.content {
@@ -381,6 +381,10 @@ $spot-speed: 7s;
       padding-left: 10%;
       padding-right: 10%;
     }
+  }
+
+  a img:hover {
+    opacity: 0.6;
   }
 }
 
