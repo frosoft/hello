@@ -19,5 +19,7 @@ module('Acceptance | index', function (hooks) {
     assert.dom('#contact').exists();
     assert.dom('#contact a').hasAttribute('href', 'mailto:richard@frosoft.co.uk');
     assert.dom('#contact a').hasText('richard@frosoft.co.uk');
+    assert.dom('#about').exists();
+    assert.dom('#about a').hasAttribute('href', 'https://github.com/frosoft/hello');
   });
 });
