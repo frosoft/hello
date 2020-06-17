@@ -4,7 +4,7 @@
   --default-color: #b9d2d2;
   --secondary-color: #f9d276;
   --spot-color: #055e68;
-  --primary-color: #219897;
+  --primary-color: #28bfbe;
   --scrollbarBG: #343434;
   --thumbBG: #f9d276;
 }
@@ -127,7 +127,7 @@ h4 {
 }
 
 a {
-  color: #219897;
+  color: #28bfbe;
   color: var(--primary-color);
   text-decoration: none;
 }
@@ -324,7 +324,7 @@ $spot-speed: 7s;
   }
 
   .tech {
-    color: #219897;
+    color: #28bfbe;
     color: var(--primary-color);
   }
   .skill {
