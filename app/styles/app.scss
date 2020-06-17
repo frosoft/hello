@@ -78,14 +78,32 @@ div.main-header {
 
 div.main-content {
   margin-top: 100vh;
+  animation: peek-up 3s ease-in-out 3s;
   position: relative;
   z-index: 2;
   box-shadow: 0px -2px 11px -2px rgba(34,76,110,1);
 }
 
+@keyframes peek-up {
+  0% {
+    margin-top: 100vh;
+  }
+  50% {
+    margin-top: 85vh;
+  }
+  100% {
+    margin-top: 100vh;
+  }
+}
+
 #about-me {
   background-color: #27323a;
   background-color: var(--alt-background-color);
+  padding-top: 7vh;
+
+   h2 {
+    margin-top: 0;
+  }
 }
 
 h2 {
