@@ -31,9 +31,9 @@ jobs:
         run: npm test
         env:
           CI: true
-      - name: npm build
-        run: npm build
-      - name: Deploy
+      - name: Build for Production
+        run: npm run build
+      - name: Deploy to Production
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
