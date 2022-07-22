@@ -912,7 +912,7 @@ if(null===a||"object"!==c&&"function"!==c)break
 var d=l+1
 if(-1===(l=t.indexOf(".",d))&&(l=u),"@each"===(n=t.slice(d,l))&&l!==u){d=l+1,l=t.indexOf(".",d)
 var h=a.length
-if("number"!=typeof h||!(Array.isArray(a)||"objectAt"in a))break
+if("number"!=typeof h||!Array.isArray(a)&&!("objectAt"in a))break
 if(0===h){o.push(I(a,"[]"))
 break}n=-1===l?t.slice(d):t.slice(d,l)
 for(var f=0;f<h;f++){var p=W(a,f)
@@ -924,7 +924,7 @@ else{var v=b(a,n)
 if(!(0,s.validate)(m,v)){var y=(0,r.meta)(a).writableLazyChainsFor(n),g=t.substr(l+1),E=y[g]
 void 0===E&&(E=y[g]=(0,s.createUpdatableTag)()),o.push(E)
 break}a=_(a).get(n)}}else if(a=a[n],l===u)break}return o}function ie(e){var t=e[0],r=e[1],n=e[2]
-return(3===e.length&&("function"==typeof t||"object"==typeof t&&null!==t)&&"string"==typeof r&&("object"==typeof n&&null!==n&&"enumerable"in n&&"configurable"in n||void 0===n))}function oe(e){var t=function(){return e}
+return 3===e.length&&("function"==typeof t||"object"==typeof t&&null!==t)&&"string"==typeof r&&("object"==typeof n&&null!==n&&"enumerable"in n&&"configurable"in n||void 0===n)}function oe(e){var t=function(){return e}
 return ee(t),t}var ae=function(){function e(){this.enumerable=!0,this.configurable=!0,this._dependentKeys=void 0,this._meta=void 0}var t=e.prototype
 return t.setup=function(e,t,r,n){n.writeDescriptors(t,this)},t.teardown=function(e,t,r){r.removeDescriptors(t)},e}()
 function se(e,t){return function(){return t.get(this,e)}}function ue(e,t){var r=function(r){return t.set(this,e,r)}
@@ -944,7 +944,7 @@ var l,c,d,h=!0;(e===Array.prototype&&(h=!1),Z(n))?(c=n(e,t,void 0,o),Object.defi
 o.isPrototypeMeta(e)||(d=e,k.has(d)&&k.get(d).forEach((function(e){e.tag=(0,s.combine)(ne(d,e.path)),e.lastRevision=(0,s.value)(e.tag)})),T.has(d)&&T.get(d).forEach((function(e){e.tag=(0,s.combine)(ne(d,e.path)),e.lastRevision=(0,s.value)(e.tag)}))),"function"==typeof e.didDefineProperty&&e.didDefineProperty(e,t,l)}var pe=new n.Cache(1e3,(function(e){return e.indexOf(".")}))
 function me(e){return"string"==typeof e&&-1!==pe.get(e)}var ve=(0,n.symbol)("PROXY_CONTENT")
 function ye(e,t){var r,i=typeof e,o="object"===i,a="function"===i,u=o||a
-return me(t)?u?ge(e,t):void 0:(void 0===(r=e[t])&&(!o||t in e||"function"!=typeof e.unknownProperty||(r=e.unknownProperty(t))),u&&(0,s.isTracking)()&&((0,s.consume)(I(e,t)),(Array.isArray(r)||(0,n.isEmberArray)(r))&&(0,s.consume)(I(r,"[]")),(0,n.isProxy)(r)&&(0,s.consume)(I(r,"content"))),r)}function ge(e,t){for(var r=e,n="string"==typeof t?t.split("."):t,i=0;i<n.length;i++){if(null==r||r.isDestroyed)return
+return me(t)?u?ge(e,t):void 0:(void 0===(r=e[t])&&o&&!(t in e)&&"function"==typeof e.unknownProperty&&(r=e.unknownProperty(t)),u&&(0,s.isTracking)()&&((0,s.consume)(I(e,t)),(Array.isArray(r)||(0,n.isEmberArray)(r))&&(0,s.consume)(I(r,"[]")),(0,n.isProxy)(r)&&(0,s.consume)(I(r,"content"))),r)}function ge(e,t){for(var r=e,n="string"==typeof t?t.split("."):t,i=0;i<n.length;i++){if(null==r||r.isDestroyed)return
 r=ye(r,n[i])}return r}function be(e,t,r,i){if(!e.isDestroyed){if(me(t))return _e(e,t,r,i)
 var o,a=(0,n.lookupDescriptor)(e,t),s=null===a?void 0:a.set
 return void 0!==s&&le.has(s)?(e[t]=r,r):(void 0!==(o=e[t])||"object"!=typeof e||t in e||"function"!=typeof e.setUnknownProperty?(e[t]=r,o!==r&&U(e,t)):e.setUnknownProperty(t,r),r)}}function _e(e,t,r,n){var i=t.split("."),o=i.pop(),a=ge(e,i)
@@ -2810,9 +2810,9 @@ function I(e,n,i){if(!e)return n
 if(!function(e,t){var r=e.createElementNS(t,"svg")
 try{r.insertAdjacentHTML("beforeend","<circle></circle>")}catch(n){}finally{return 1!==r.childNodes.length||"http://www.w3.org/2000/svg"!==r.firstChild.namespaceURI}}(e,i))return n
 var o=e.createElement("div")
-return(function(e){function n(){return e.apply(this,arguments)||this}return(0,t.inheritsLoose)(n,e),n.prototype.insertHTMLBefore=function(t,n,a){return""===a||t.namespaceURI!==i?e.prototype.insertHTMLBefore.call(this,t,n,a):function(e,t,n,i){var o
+return function(e){function n(){return e.apply(this,arguments)||this}return(0,t.inheritsLoose)(n,e),n.prototype.insertHTMLBefore=function(t,n,a){return""===a||t.namespaceURI!==i?e.prototype.insertHTMLBefore.call(this,t,n,a):function(e,t,n,i){var o
 if("FOREIGNOBJECT"===e.tagName.toUpperCase()){var a="<svg><foreignObject>"+n+"</foreignObject></svg>";(0,r.clearElement)(t),t.insertAdjacentHTML("afterbegin",a),o=t.firstChild.firstChild}else{var s="<svg>"+n+"</svg>";(0,r.clearElement)(t),t.insertAdjacentHTML("afterbegin",s),o=t.firstChild}return function(e,t,r){for(var n=e.firstChild,i=n,o=n;o;){var a=o.nextSibling
-t.insertBefore(o,r),i=o,o=a}return new v(t,n,i)}(o,e,i)}(t,o,a,n)},n}(n))}function L(e,r){return e&&function(e){var t=e.createElement("div")
+t.insertBefore(o,r),i=o,o=a}return new v(t,n,i)}(o,e,i)}(t,o,a,n)},n}(n)}function L(e,r){return e&&function(e){var t=e.createElement("div")
 if(t.appendChild(e.createTextNode("first")),t.insertAdjacentHTML("beforeend","second"),2===t.childNodes.length)return!1
 return!0}(e)?function(e){function r(t){var r
 return(r=e.call(this,t)||this).uselessComment=t.createComment(""),r}return(0,t.inheritsLoose)(r,e),r.prototype.insertHTMLBefore=function(t,r,n){if(""===n)return e.prototype.insertHTMLBefore.call(this,t,r,n)
@@ -3936,7 +3936,8 @@ return Object.isFrozen(e)||e.hasOwnProperty("attributes")?Object.freeze((0,t.ass
 return t.getModel=function(e){return n.Promise.resolve(this.context)},t.serialize=function(e){return this.params||{}},t.resolve=function(e,t){var r=this
 return n.Promise.resolve(this.routePromise).then((function(t){return r.checkForAbort(e,t)})).then((function(){return r.runBeforeModelHook(t)})).then((function(){return r.checkForAbort(e,null)})).then((function(){return r.getModel(t)})).then((function(t){return r.checkForAbort(e,t)})).then((function(e){return r.runAfterModelHook(t,e)})).then((function(e){return r.becomeResolved(t,e)}))},t.becomeResolved=function(e,t){var r,n=this.serialize(t)
 e&&(this.stashResolvedModel(e,t),e[g]=e[g]||{},e[g][this.name]=n)
-var i=t===this.context;("context"in this||!i)&&(r=t)
+var i=t===this.context
+!("context"in this)&&i||(r=t)
 var o=w.get(this),a=new S(this.router,this.name,this.paramNames,n,this.route,r)
 return void 0!==o&&w.set(a,o),a},t.shouldSupercede=function(e){if(!e)return!0
 var t=e.context===this.context
@@ -4426,7 +4427,7 @@ t.default.prototype._createRecordData=function(e){var t=n(this)
 return t.has(e.type)||t.set(e.type,!1),i.call(this,e)}
 e.default={name:"@ember-data/data-adapter",initialize:function(){}}})),define("@ember-data/model/-private",["exports","@ember-data/store/-private","@ember-data/store"],(function(e,t,r){"use strict"
 function n(e){var t=e[0],r=e[1],n=e[2]
-return(3===e.length&&("function"==typeof t||"object"==typeof t&&null!==t)&&"string"==typeof r&&("object"==typeof n&&null!==n&&"enumerable"in n&&"configurable"in n||void 0===n))}function i(e){return function(){for(var t=arguments.length,r=new Array(t),i=0;i<t;i++)r[i]=arguments[i]
+return 3===e.length&&("function"==typeof t||"object"==typeof t&&null!==t)&&"string"==typeof r&&("object"==typeof n&&null!==n&&"enumerable"in n&&"configurable"in n||void 0===n)}function i(e){return function(){for(var t=arguments.length,r=new Array(t),i=0;i<t;i++)r[i]=arguments[i]
 return n(r)?e().apply(void 0,r):e.apply(void 0,r)}}var o=i((function(e,r){"object"==typeof e?(r=e,e=void 0):r=r||{}
 var n={type:e,isAttribute:!0,kind:"attribute",options:r}
 return Ember.computed({get:function(e){var n=this._internalModel
